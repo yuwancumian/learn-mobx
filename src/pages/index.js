@@ -3,7 +3,7 @@ import styles from './index.css';
 import {observable, action} from 'mobx';
 import { observer } from 'mobx-react';
 class MyState {
-  @observable count =0;
+  @observable count =10;
   @action add = () => {
     this.count +=1
   }
@@ -15,8 +15,6 @@ const newState = new MyState();
 
 @observer
 class Index extends React.Component {
-
-
   render() {
     return (
       <div className={styles.normal}>
